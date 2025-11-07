@@ -1,4 +1,4 @@
-module github.com/agrimmer/mini-ci-example-gh
+module github.com/agrimmer/mini-ci-example
 
 go 1.21
 

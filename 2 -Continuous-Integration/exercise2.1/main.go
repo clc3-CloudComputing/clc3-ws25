@@ -9,12 +9,10 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	t := time.Now()
-	fmt.Fprintf(w, "Hello, it is %d:%d", t.Hour(), getMinute(t.Minute(), t.Second()))
-
-	Fibonacci(1000)
+	fmt.Fprintf(w, "Hello, it is %d:%d", t.Hour(), getRoundedMinute(t.Minute(), t.Second()))
 }
 
-func getMinute(minute int, second int) int {
+func getRoundedMinute(minute int, second int) int {
 	return minute + second/30
 }
 

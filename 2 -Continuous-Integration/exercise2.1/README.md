@@ -1,7 +1,7 @@
 # Exercise 2.1: Setup Continuous Integration
 
 In this exercise, you will set up a *Continuous Integration* (CI) workflow using GitHub as the version control system, GitHub Actions as the build tool, and DockerHub as the artifact repository. This workflow will execute the unit tests of the source code and build the code. 
-For triggering the workflow, a change of the codebase must be performed. 
+A change in the codebase should trigger the workflow.
 
 ## Setup
 
@@ -22,13 +22,13 @@ For triggering the workflow, a change of the codebase must be performed.
 
 1. Create a **public** GitHub repository called `mini-ci-example`
 
-1. Add and commit `main.go`, `main_test.go`, `fib.go`, `fib_test.go`, and `go.mod` to your repository via drag-and-drop.
+2. Add and commit `main.go`, `main_test.go`, and `go.mod` to your repository via drag-and-drop.
 
-1. In GitHub, go to **Actions** and set up a GitHub workflow by clicking `set up a workflow yourself`:
+3. In GitHub, go to **Actions** and set up a GitHub workflow by clicking `set up a workflow yourself`:
 
 ![GitHub Action activation](./assets/gh_action_activate.png)
 
-1. Create file `CI.yml` in the folder `.github/workflows` of your repository and copy-paste the content from the provided `CI.yml` file. 
+1. Create a file `main.yml` in the folder `.github/workflows` of your repository and copy-paste the content from the provided `CI.yml` file. 
 
 ```yaml
 name: CI
@@ -54,7 +54,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Runs a single command using the runners shell
       - name: Run a one-line script

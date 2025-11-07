@@ -53,7 +53,7 @@ In this exercise, you will integrate DockerHub into the CI workflow to push an i
     # Build a Docker image based on the provided Dockerfile
     - name: Build and push
       id: docker_build
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         context: .
         push: true
@@ -69,7 +69,7 @@ In this exercise, you will integrate DockerHub into the CI workflow to push an i
 
 ### Use Git SHA instead of `latest`
 
-It is not good practice to use the version `latest` for an image tag. Instead, make it as concrete as possible, e.g., by using the Git commit SHA instead: 
+It is not good practice to use the version `latest` for an image tag. Instead, make it as specific as possible, e.g., by using the Git commit SHA instead: 
 
 1. Extend the `CI.yml` workflow with a step that derives the short Git commit SHA and stores it in a variable: 
 
