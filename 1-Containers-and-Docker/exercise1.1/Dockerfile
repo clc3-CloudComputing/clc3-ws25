@@ -10,10 +10,10 @@
 # Copy local files `go.mod` and `main.go` to the working directory
 
 
-# List items in the working directory (ls -lsa) and show content of the `main.go`file (cat)
+# List items in the working directory (ls -lsa)
 
 
-# Build the app (CGO_ENABLED=0 go build -o /usr/myapp) and show the /usr directory  (ls -lsa)
+# Build the app (CGO_ENABLED=0 go build -o /usr/hello-app)
 
 
 # Expose the port 8888

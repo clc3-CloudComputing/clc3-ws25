@@ -31,11 +31,12 @@ In this exercise, you will write a Dockerfile and you will build an im
     * Set author label: `author='<YOUR-EMAIL'>`
     * Set working directory: `/opt`
     * Copy local file `go.mod` and `main.go` to the image folder `/opt/`
-    * List items in the working directory (`ls -lsa`) and show content of the `main.go` file (cat)
-    * Build the app (`CGO_ENABLED=0 go build -o /usr/myapp`) and show the /usr directory  (`ls -lsa`)
+    * List items in the working directory (`ls -lsa`)
+    * Build the app (`CGO_ENABLED=0 go build -o /usr/hello-app`)
+    * Expose the port `8888`
     * Run the app
 
-1. Build a Docker image based on the Dockerfile:
+2. Build a Docker image based on the Dockerfile:
     * Image tag: `[YOUR-DOCKERHUB-ACCOUNT]/hello-app:0.0.1`
 
     ```console
@@ -43,7 +44,7 @@ In this exercise, you will write a Dockerfile and you will build an im
     ```
     *Note:* If your Docker version is greater than 0.18, you are using Docker's new BuildKit engine that does not display the output from a `RUN` step. Therefore, add the option: `--progress=plain`
 
-1. Execute the command a second time: 
+3. Execute the command a second time: 
 
     ```console
     docker image build -f Dockerfile -t [YOUR-DOCKERHUB-ACCOUNT]/hello-app:0.0.1 ./
@@ -51,7 +52,7 @@ In this exercise, you will write a Dockerfile and you will build an im
 
     :mag: What is your observation? 
   
-1. List all images that are stored in your local registry:
+4. List all images that are stored in your local registry:
 
     ```console
     docker images
