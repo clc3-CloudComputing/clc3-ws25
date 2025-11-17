@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/clc3-CloudComputing/clc3-ws23/4-Continuous-Deployment/exercise4.1/src/internal/format"
+	"github.com/clc3-CloudComputing/clc3-ws25/4-Continuous-Deployment/exercise4.1/src/internal/format"
 )
 
 const plainOutput = `Good day! Time now: %02d:%02d`
